@@ -31,7 +31,7 @@ window.onload = function () {
 }
 
 // Countdown
-const tglTujuan = new Date('august 08 2022 3:59:00').getTime();
+const tglTujuan = new Date('december 30 2022 08:00:00').getTime();
 
 const hitungMundur = setInterval(function() {
     const tglSekarang =  new Date().getTime();
