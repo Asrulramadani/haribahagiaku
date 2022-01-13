@@ -3,23 +3,6 @@
 // Popup card music
 window.onload = function () {
     // popup card
-    const popupCard = document.querySelector(".popup-card");
-
-    popupCard.classList.add("active")
-
-        
-    const audio = document.querySelector("#audio")
-    
-    const btnTidak = document.querySelector(".tidak");
-    btnTidak.addEventListener("click", ()=>{
-        popupCard.classList.remove("active")
-    })
-
-    const btnYa = document.querySelector(".ya");
-    btnYa.addEventListener("click", ()=>{
-        popupCard.classList.remove("active");
-        audio.play();
-    })
 
 
     // Animation on load
