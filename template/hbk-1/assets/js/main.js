@@ -22,7 +22,6 @@ window.onload = function () {
         audio.play();
     })
 
-
     // Animation on load
     const box = document.querySelectorAll(".box");
 
