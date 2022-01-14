@@ -1,8 +1,9 @@
 "use strict";
 
-// Popup card music
+// action on load
 window.onload = function () {
-    // popup card
+
+    // popup card music
     const popupCard = document.querySelector(".popup-card");
 
     popupCard.classList.add("active")
