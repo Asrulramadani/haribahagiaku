@@ -25,13 +25,13 @@ bukaUndangan.addEventListener("click", function () {
 const iconMusik = document.querySelector("#icon-musik");
 iconMusik.addEventListener("click", musik(this));
 
-function musik(this) {
+function musik(el) {
   if (audio.play()) {
     audio.pause();
-    this.classList.replace("bi-pause-fill", "bi-play-fill");
+    el.classList.replace("bi-pause-fill", "bi-play-fill");
   } else {
     audio.play();
-    this.classList.replace("bi-play-fill", "bi-pause-fill");
+    el.classList.replace("bi-play-fill", "bi-pause-fill");
   }
 }
 
