@@ -23,7 +23,9 @@ bukaUndangan.addEventListener("click", function () {
 
 // icon musik
 const iconMusik = document.querySelector("#icon-musik");
-iconMusik.addEventListener("click", function () {
+iconMusik.addEventListener("click", musik());
+
+function musik() {
   if (audio.play()) {
     audio.pause();
     this.classList.replace("bi-pause-fill", "bi-play-fill");
@@ -31,7 +33,7 @@ iconMusik.addEventListener("click", function () {
     audio.play();
     this.classList.replace("bi-play-fill", "bi-pause-fill");
   }
-});
+}
 
 // Countdown
 const tglTujuan = new Date("December 30 2022 08:00:00").getTime();
