@@ -27,7 +27,7 @@ iconMusik.addEventListener("click", function () {
   if (audio.play()) {
     audio.pause();
     this.classList.replace("bi-pause-fill", "bi-play-fill");
-  } else if (audio.pause()) {
+  } else {
     audio.play();
     this.classList.replace("bi-play-fill", "bi-pause-fill");
   }
