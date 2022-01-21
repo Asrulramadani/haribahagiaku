@@ -23,9 +23,9 @@ bukaUndangan.addEventListener("click", function () {
 
 // icon musik
 const iconMusik = document.querySelector("#icon-musik");
-iconMusik.addEventListener("click", musik());
+iconMusik.addEventListener("click", musik(this));
 
-function musik() {
+function musik(this) {
   if (audio.play()) {
     audio.pause();
     this.classList.replace("bi-pause-fill", "bi-play-fill");
