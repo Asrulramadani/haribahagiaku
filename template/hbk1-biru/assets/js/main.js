@@ -30,6 +30,7 @@ function musik(el) {
   } else {
     audio.play();
     el.classList.replace("bi-play-fill", "bi-pause-fill");
+    console.log("haha");
   }
 }
 
