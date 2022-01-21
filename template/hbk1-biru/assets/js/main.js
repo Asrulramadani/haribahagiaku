@@ -22,8 +22,6 @@ bukaUndangan.addEventListener("click", function () {
 
 
 // icon musik
-const iconMusik = document.querySelector("#icon-musik");
-iconMusik.addEventListener("click", musik(this));
 
 function musik(el) {
   if (audio.play()) {
