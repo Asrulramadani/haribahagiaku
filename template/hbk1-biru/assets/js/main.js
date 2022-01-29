@@ -1,6 +1,7 @@
 "use strict";
 
 const audio = document.querySelector("#audio");
+let isPlaying;
 
 //onBtn buka undangan click
 const bukaUndangan = document.querySelector(".buka-undangan");
@@ -17,22 +18,26 @@ bukaUndangan.addEventListener("click", function () {
 
   // audio
   audio.play();
-  
+  isPlaying = true;
+
 });
 
 
-// icon musik
 
+// icon musik
 function musik(el) {
-  if (audio.play()) {
+  if (isPlaying) {
     audio.pause();
     el.classList.replace("bi-pause-fill", "bi-play-fill");
-  } else {
+    isPlaying = false;
+  } 
+  else if(!isPlaying) {
     audio.play();
     el.classList.replace("bi-play-fill", "bi-pause-fill");
-    console.log("haha");
+    isPlaying = true;
   }
 }
+
 
 // Countdown
 const tglTujuan = new Date("December 30 2022 08:00:00").getTime();
@@ -117,9 +122,33 @@ form.addEventListener("submit", (e) => {
     .catch((error) => console.error("Error!", error.message));
 });
 
+
 // Close alert
 const closeBtn = document.querySelector(".close");
 
 closeBtn.addEventListener("click", () => {
   myAlert.classList.toggle("d-none");
+});
+
+
+
+// prevent inspect element
+
+document.onkeydown = function(e) { 
+//  if( e.keyCode == 123 ){ 
+//    return false; 
+//  } 
+  if(e.ctrlKey && e.shiftKey &&e.keyCode == 'I'.charCodeAt(0)){ 
+    return false; 
+  } 
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){ 
+    return false; 
+  } 
+  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){ 
+    return false; 
+  } 
+} 
+
+document.addEventListener("contextmenu", function(e){
+  e.preventDefault();
 });
