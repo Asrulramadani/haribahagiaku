@@ -1,90 +1,167 @@
+// Animate on scroll
+
+let imgGallery = document.querySelectorAll(".gallery .img")
+imgGallery.forEach((el, i) => {
+  el.dataset.aos = "fade-down"
+  el.dataset.aosDelay = i * 100
+})
+
+AOS.init();
+
+
+// icon musik
 const audio = document.querySelector("#audio");
 let isPlaying;
-const iconMusik = document.querySelector("#icon-musik");
+const iconMusik = document.querySelector("#icon-musik")
+
+iconMusik.addEventListener("click", musik())
+
 function musik() {
-  isPlaying
-    ? (audio.pause(),
-      iconMusik.classList.replace("bi-pause-fill", "bi-play-fill"),
-      (isPlaying = !1))
-    : isPlaying ||
-      (audio.play(),
-      iconMusik.classList.replace("bi-play-fill", "bi-pause-fill"),
-      (isPlaying = !0));
+  if (isPlaying) {
+    audio.pause();
+    iconMusik.classList.replace("bi-pause-fill", "bi-play-fill");
+    isPlaying = false;
+  } else if (!isPlaying) {
+    audio.play();
+    iconMusik.classList.replace("bi-play-fill", "bi-pause-fill");
+    isPlaying = true;
+  }
 }
-const tglTujuan = new Date("May 1 2022 09:00:00").getTime(),
-  hitungMundur = setInterval(function () {
-    const e = new Date().getTime(),
-      t = tglTujuan - e,
-      n = Math.floor(t / 864e5),
-      o = Math.floor((t % 864e5) / 36e5),
-      l = Math.floor((t % 36e5) / 6e4),
-      c = Math.floor((t % 6e4) / 1e3);
-    document.getElementById("hari").innerHTML = n;
-    const i = document.getElementById("jam");
-    i.innerHTML = o;
-    const r = document.getElementById("menit");
-    r.innerHTML = l;
-    const s = document.getElementById("detik");
-    if (
-      ((s.innerHTML = c),
-      o < 10 && (i.innerHTML = `0${o}`),
-      l < 10 && (r.innerHTML = `0${l}`),
-      c < 10 && (s.innerHTML = `0${c}`),
-      t <= 0)
-    ) {
-      document.getElementById("countdown").style.display = "none";
-    }
-  }, 1e3),
-  btnCopy = document.querySelectorAll("#copy");
-btnCopy.forEach((e) => {
-  e.addEventListener("click", () => {
-    const t = navigator.clipboard,
-      n = e.parentElement.dataset.akun;
-    t.writeText(n).then(() => {
-      e.classList.replace("bi-clipboard", "bi-check-all"),
-        alert(`${n}   berhasil dicopy`);
+
+
+
+// Countdown
+const tglTujuan = new Date("May 1 2022 09:00:00").getTime();
+
+const hitungMundur = setInterval(function () {
+  const tglSekarang = new Date().getTime();
+
+  const selisih = tglTujuan - tglSekarang;
+  const hari = Math.floor(selisih / (1000 * 60 * 60 * 24));
+  const jam = Math.floor((selisih % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const menit = Math.floor((selisih % (1000 * 60 * 60)) / (1000 * 60));
+  const detik = Math.floor((selisih % (1000 * 60)) / 1000);
+
+  const txtHari = document.getElementById("hari");
+  txtHari.innerHTML = hari;
+  const txtJam = document.getElementById("jam");
+  txtJam.innerHTML = jam;
+  const txtMenit = document.getElementById("menit");
+  txtMenit.innerHTML = menit;
+  const txtDetik = document.getElementById("detik");
+  txtDetik.innerHTML = detik;
+
+  if (jam < 10) {
+    txtJam.innerHTML = `0${jam}`;
+  }
+  if (menit < 10) {
+    txtMenit.innerHTML = `0${menit}`;
+  }
+  if (detik < 10) {
+    txtDetik.innerHTML = `0${detik}`;
+  }
+
+  if (selisih <= 0) {
+    const countdown = document.getElementById("countdown");
+    countdown.style.display = "none";
+  }
+}, 1000);
+
+
+
+// copy text to cliboard
+const btnCopy = document.querySelectorAll("#copy");
+
+btnCopy.forEach((el) => {
+  el.addEventListener("click", () => {
+    const cb = navigator.clipboard;
+    const text = el.parentElement.dataset.akun;
+    cb.writeText(text).then(() => {
+      el.classList.replace("bi-clipboard", "bi-check-all")
+      alert(`${text}   berhasil dicopy`)
     });
   });
 });
+
+
+// Form submit to spreedsheets
+
 const scriptURL =
-    "https://script.google.com/macros/s/AKfycbydtI759XNMYoMNPeMlKu5pcnslQxjesQ6KOzxOkiL3PShOgcXtrWZG6uzZuMpI9PMM/exec",
-  form = document.forms["my-form"],
-  myForm = document.querySelector(".my-Form"),
-  myAlert = document.querySelector(".my-alert"),
-  btnKirim = document.querySelector(".btnKirim"),
-  btnloading = document.querySelector(".btnLoading");
+  "https://script.google.com/macros/s/AKfycbydtI759XNMYoMNPeMlKu5pcnslQxjesQ6KOzxOkiL3PShOgcXtrWZG6uzZuMpI9PMM/exec";
+const form = document.forms["my-form"];
+
+const myForm = document.querySelector(".my-Form");
+const myAlert = document.querySelector(".my-alert");
+const btnKirim = document.querySelector(".btnKirim");
+const btnloading = document.querySelector(".btnLoading");
+
 form.addEventListener("submit", (e) => {
-  e.preventDefault(),
-    btnKirim.classList.toggle("d-none"),
-    btnloading.classList.toggle("d-none"),
-    fetch(scriptURL, { method: "POST", body: new FormData(form) })
-      .then((e) => {
-        console.log("Success!", e),
-          myAlert.classList.toggle("d-none"),
-          btnKirim.classList.toggle("d-none"),
-          btnloading.classList.toggle("d-none"),
-          form.reset();
-      })
-      .catch((e) => console.error("Error!", e.message));
-}),
-  (document.onkeydown = function (e) {
-    return (
-      123 != e.keyCode &&
-      (!e.ctrlKey || !e.shiftKey || e.keyCode != "I".charCodeAt(0)) &&
-      (!e.ctrlKey || !e.shiftKey || e.keyCode != "J".charCodeAt(0)) &&
-      (!e.ctrlKey || e.keyCode != "U".charCodeAt(0)) &&
-      void 0
-    );
-  }),
-  document.addEventListener("contextmenu", function (e) {
-    e.preventDefault();
-  }),
-  document.body.addEventListener("click", openFullscreen);
+  e.preventDefault();
+
+  btnKirim.classList.toggle("d-none");
+  btnloading.classList.toggle("d-none");
+
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => {
+      console.log("Success!", response);
+
+      myAlert.classList.toggle("d-none");
+      btnKirim.classList.toggle("d-none");
+      btnloading.classList.toggle("d-none");
+      form.reset();
+    })
+    .catch((error) => console.error("Error!", error.message));
+});
+
+
+
+
+
+// prevent inspect element
+document.onkeydown = function(e) { 
+  // if( e.keyCode == 123 ){ 
+  //   return false; 
+  // } 
+  if(e.ctrlKey && e.shiftKey &&e.keyCode == 'I'.charCodeAt(0)){ 
+    return false; 
+  } 
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){ 
+    return false; 
+  } 
+  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){ 
+    return false; 
+  } 
+} 
+
+document.addEventListener("contextmenu", function(e){
+  e.preventDefault();
+});
+
+
+
+// lihat undangan
+const bukaUndangan = document.querySelector(".buka-undangan")
+
+bukaUndangan.addEventListener("click", function() {
+  this.parentElement.classList.toggle("d-none")
+
+  const lihatUndangan = document.querySelector(".lihat-undangan")
+  lihatUndangan.classList.toggle("d-none")
+
+  musik()
+  openFullscreen()
+})
+
+
+
+// fullsreen
 var elem = document.documentElement;
 function openFullscreen() {
-  elem.requestFullscreen
-    ? elem.requestFullscreen()
-    : elem.webkitRequestFullscreen
-    ? elem.webkitRequestFullscreen()
-    : elem.msRequestFullscreen && elem.msRequestFullscreen();
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
 }

@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Required meta tags -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="haribahagiaku" />
+
     <meta property="og:type" content="website" />
+
+    <!-- Site Name, Title, and Description to be displayed -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Aqiqah-1 | Hari Bahagiaku" />
     <meta property="og:title" content="Aqiqah-1 | Hari Bahagiaku" />
     <meta
       property="og:description"
-      content="Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i serta Kerabat sekalian untuk menghadiri acara Aqiqah putra kami."
+      content="Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i  serta Kerabat sekalian untuk menghadiri acara Aqiqah putra kami."
     />
     <meta
       property="og:url"
       content="https://haribahagiaku.netlify.app/template/aqiqah1"
     />
+
+    <!-- No need to change anything here -->
+
     <meta property="og:image:type" content="image/jpeg" />
     <meta
       property="og:image"
       content="https://haribahagiaku.netlify.app/template/aqiqah1/assets/images/thumb.jpg"
     />
+
+    <!-- Size of image. Any size up to 300. Anything above 300px will not work in WhatsApp -->
     <meta property="og:image:width" content="300" />
     <meta property="og:image:height" content="300" />
+
     <meta
       name="description"
-      content="Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i serta Kerabat sekalian untuk menghadiri acara Aqiqah putra kami."
+      content="Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i  serta Kerabat sekalian untuk menghadiri acara Aqiqah putra kami."
     />
+
+    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta
       property="twitter:url"
@@ -38,25 +50,32 @@
       property="twitter:image"
       content="https://haribahagiaku.netlify.app/template/aqiqah1/assets/images/thumb.jpg"
     />
+
+    <!-- Pavicon -->
     <link
       rel="shortcut icon"
       href="assets/images/pavicon.png"
       type="image/x-icon"
     />
+
+    <!-- Icon -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css"
     />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- My Style -->
     <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Animate on scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <title>Aqiqah-1 | Hari Bahagiaku</title>
   </head>
-  <body id="fs">
+  <body >
     <link
       itemprop="thumbnailUrl"
       href="https://haribahagiaku.netlify.app/template/aqiqah1/assets/images/thumb.jpg"
@@ -72,39 +91,70 @@
       />
     </span>
     <section id="app">
+      <!-- icon musik -->
       <i
         class="bi bi-play-fill icon-musik"
         id="icon-musik"
         onclick="musik()"
       ></i>
+
+      <!-- musik -->
       <audio
         src="assets/song/ROHMAN YA ROHMAN COVER BY SABYAN.mp3"
         id="audio"
         loop
       ></audio>
+
+      <!-- Overlay -->
+      <div class="overlay">
+        <div class="img-box">
+          <img src="assets/images/baby-frame.png" alt="" />
+        </div>
+        <div class="row justify-content-center text-center">
+          <div class="col-10 col-md-6">
+            <h1 class="mb-3">Gibran Raqqilla Firaz</h1>
+            <p>
+              Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i
+              serta Kerabat sekalian untuk menghadiri acara Aqiqah putra kami.
+            </p>
+          </div>
+        </div>
+        <a href="#" class="buka-undangan"
+          ><i class="bi bi-envelope-open-circle"></i>Buka Undangan</a
+        >
+      </div>
+      <!-- end overlay -->
+      <!-- container home -->
       <div class="container-fluid home">
         <div class="row">
           <div class="col">
-            <h2>UNDANGAN AQIQAH</h2>
-            <h1>Gibran Raqqilla Firaz</h1>
-            <h2>Senin, 1 Mei 2022</h2>
+            <h2 data-aos="fade-up">UNDANGAN AQIQAH</h2>
+            <h1 data-aos="fade-up" data-aos-delay="100">
+              Gibran Raqqilla Firaz
+            </h1>
+            <h2 data-aos="fade-up" data-aos-delay="200">Senin, 1 Mei 2022</h2>
           </div>
         </div>
-        <a href="#info-bayi" class="lihat-undangan" onclick="musik()"
+        <a href="#info-bayi" class="lihat-undangan d-none"
           ><i class="bi bi-arrow-down-circle"></i>Lihat Undangan</a
         >
       </div>
+      <!-- end container home -->
+
+      <!-- container info bayi -->
       <div
         class="container-fluid info-bayi justify-content-center"
         id="info-bayi"
       >
         <div class="row justify-content-center pt-5">
           <div class="col-md-7 col-sm-10 text-center">
-            <h2 class="arabic">ِبِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيْم</h2>
-            <p class="mt-1 fw-bold">
+            <h2 class="arabic" data-aos="fade-up" data-aos-delay="300">
+              ِبِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيْم
+            </h2>
+            <p class="mt-1 fw-bold" data-aos="fade-up" data-aos-delay="400">
               Assalamualaikum Warahmatullahi Wabarakatuh
             </p>
-            <p>
+            <p data-aos="fade-up" data-aos-delay="500">
               Alhamdulillah puji syukur kehadirat Allah SWT atas berkah dan
               rahmat-Nya. Sholawat serta salam tetap tercurah kepada suri
               tauladan Nabi Muhammad SAW. Kami bermaksud mengundang
@@ -113,9 +163,14 @@
             </p>
           </div>
         </div>
+        <!-- card -->
         <div class="row justify-content-center pt-4">
           <div class="col-md-7 col-sm-8">
-            <div class="card card-bayi text-center">
+            <div
+              class="card card-bayi text-center"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
               <div class="img">
                 <img src="assets/images/baby1.webp" alt="" />
               </div>
@@ -131,11 +186,14 @@
           </div>
         </div>
       </div>
+      <!-- end container info bayi -->
+
+      <!-- container info acara -->
       <div class="container-fluid info-acara pt-5 pb-5">
         <div class="row justify-content-center">
           <div class="col-md-7 col-sm-10 text-center">
-            <h1>Acara</h1>
-            <p>
+            <h1 data-aos="fade-up">Acara</h1>
+            <p data-aos="fade-up" data-aos-delay="100">
               Dengan mengharap rahmat dan ridho Allah SWT, Kami bermaksud
               menyelenggarakan Tasyakuran Aqiqah puteri kami, yang Insya Allah
               akan diselenggarakan pada:
@@ -144,7 +202,7 @@
         </div>
         <div class="row cards justify-content-evenly pb-3">
           <div class="col-md-5 col-sm-8 mb-4">
-            <div class="card acara">
+            <div class="card acara" data-aos="fade-right">
               <div class="card-body">
                 <div class="row">
                   <div class="col-md-10">
@@ -163,8 +221,12 @@
               </div>
             </div>
           </div>
-          <div class="col-md-7 col-sm-8">
-            <div class="card protokol-kesehatan">
+          <div class="col-md-6 col-sm-8">
+            <div
+              class="card protokol-kesehatan"
+              data-aos="fade-left"
+              data-aos-delay="100"
+            >
               <div class="card-body">
                 <div class="row">
                   <div class="col text-center">
@@ -192,29 +254,37 @@
             </div>
           </div>
         </div>
-        <div class="row justify-content-center countdown">
-          <div class="card" style="--i: 2">
+        <div class="row justify-content-center countdown" data-aos="fade-up"id="countdown">
+          <!-- countdown -->
+          <div class="card" data-aos="fade-up">
             <h2 id="hari" class="time">11</h2>
             <p>Hari</p>
           </div>
-          <div class="card" style="--i: 3">
+          <div class="card" data-aos="fade-up" data-aos-delay="100">
             <h2 id="jam" class="time">11</h2>
             <p>Jam</p>
           </div>
-          <div class="card" style="--i: 4">
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
             <h2 id="menit" class="time">11</h2>
             <p>Menit</p>
           </div>
-          <div class="card" style="--i: 5">
+          <div class="card" data-aos="fade-up" data-aos-delay="300">
             <h2 id="detik" class="time">11</h2>
             <p>Detik</p>
           </div>
         </div>
       </div>
+      <!-- end container info acara -->
+
+      <!-- container gallery -->
       <div class="container-fluid gallery pt-5 pb-5">
         <div class="row justify-content-center pb-4">
-          <div class="col-md-7 col-sm-10 text-center"><h1>Galeri Foto</h1></div>
+          <div class="col-md-7 col-sm-10 text-center">
+            <h1 data-aos="fade-up">Galeri Foto</h1>
+          </div>
         </div>
+
+        <!-- Gallery -->
         <div class="row justify-content-evenly">
           <div class="col-md-3 col-sm-10">
             <img src="assets/images/baby1.webp" class="img" />
@@ -238,10 +308,16 @@
             <img src="assets/images/baby5.webp" class="img" />
           </div>
         </div>
+        <!-- Gallery -->
       </div>
+      <!-- end container gallery -->
+
+      <!-- Container buku tamu -->
       <div class="container-fluid buku-tamu pt-5 pb-5">
         <div class="row justify-content-center pb-4">
-          <div class="col-md-7 col-sm-10 text-center"><h1>Buku Tamu</h1></div>
+          <div class="col-md-7 col-sm-10 text-center">
+            <h1 data-aos="fade-up">Buku Tamu</h1>
+          </div>
           <div class="col-md-6 pt-3 d-none my-alert">
             <div
               class="alert alert-success alert-dismissible fade show"
@@ -260,11 +336,14 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6 col-sm-8">
-            <div class="ucapan">
+            <!-- Form -->
+            <div class="ucapan" data-aos="fade-up" data-aos-delay="100">
               <form name="my-form" class="my-form">
                 <div class="input-box">
                   <input type="text" autocomplete="off" name="nama" required />
-                  <div class="label-name"><span>Nama Lengkap</span></div>
+                  <div class="label-name">
+                    <span>Nama Lengkap</span>
+                  </div>
                 </div>
                 <div class="input-box">
                   <input
@@ -273,7 +352,9 @@
                     name="alamat"
                     required
                   />
-                  <div class="label-name"><span>Alamat</span></div>
+                  <div class="label-name">
+                    <span>Alamat</span>
+                  </div>
                 </div>
                 <div class="input-box">
                   <textarea
@@ -282,6 +363,7 @@
                     placeholder="Ucapan/Doa"
                     name="pesan"
                   ></textarea>
+                  <!-- <input type="text" autocomplete="off" required>-->
                 </div>
                 <button type="submit" class="btnKirim">Kirim</button>
                 <button type="button" class="d-none btnLoading" disabled>
@@ -292,15 +374,19 @@
           </div>
         </div>
       </div>
+      <!-- End container buku tamu -->
+
+      <!-- Container amplop digital -->
+
       <div class="container-fluid amplop-digital pt-5 pb-5">
         <div class="row justify-content-center">
           <div class="col-md-7 col-sm-10 text-center pb-5">
-            <h1>Amplop Digital</h1>
+            <h1 data-aos="fade-up">Amplop Digital</h1>
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-3 col-sm-6 mb-3">
-            <div class="card">
+          <div class="col-8 col-md-3 col-sm-10 mb-3">
+            <div class="card" data-aos="fade-right">
               <div class="img-box">
                 <img src="assets/images/DANA.webp" alt="" />
               </div>
@@ -312,8 +398,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3 col-sm-6 mb-3">
-            <div class="card">
+          <div class="col-8 col-md-3 col-sm-10 mb-3">
+            <div class="card" data-aos="fade-up" data-aos-delay="200">
               <div class="img-box">
                 <img src="assets/images/BCA.webp" alt="" />
               </div>
@@ -325,8 +411,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3 col-sm-6 mb-3">
-            <div class="card">
+          <div class="col-8 col-md-3 col-sm-10 mb-3">
+            <div class="card" data-aos="fade-left" data-aos-delay="100">
               <div class="img-box">
                 <img src="assets/images/Gopay.webp" alt="" />
               </div>
@@ -340,15 +426,21 @@
           </div>
         </div>
       </div>
+
+      <!-- end container amplop digital -->
       <div class="container-fluid map pt-5 pb-5">
         <div class="row justify-content-center pb-4">
           <div class="col-md-7 col-sm-10 text-center">
-            <h1>Denah Lokasi</h1>
+            <h1 data-aos="fade-up">Denah Lokasi</h1>
           </div>
         </div>
         <div class="row justify-content-center">
           <div class="col-md-10 col-sm-12">
-            <div class="map-box text-center">
+            <div
+              class="map-box text-center"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d1989.70249487759!2d120.03041371189663!3d-4.140477238780257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x2d95e72a0e4d4b75%3A0x6e280901f8cdba28!2sKota%20sengkang%2C%20Jl.%20Lamddukkelleng%20No.1%2C%20Siengkang%2C%20Tempe%2C%20Kabupaten%20Wajo%2C%20Sulawesi%20Selatan%2090914!3m2!1d-4.1405199999999995!2d120.03164459999999!5e0!3m2!1sid!2sid!4v1643858489984!5m2!1sid!2sid"
                 style="border: 0"
@@ -364,10 +456,13 @@
           </div>
         </div>
       </div>
+      <!-- Container Map -->
+
+      <!-- container penutup -->
       <div class="container-fluid info-acara pt-5 pb-5">
         <div class="row justify-content-center">
           <div class="col-md-7 col-sm-10 text-center pb-5">
-            <p>
+            <p data-aos="fade-right">
               Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila
               Bapak/Ibu/Saudara/i berkenan hadir. Atas kehadiran dan Do'a nya,
               kami mengucapkan terima kasih
@@ -376,14 +471,17 @@
         </div>
         <div class="row justify-content-center text-center">
           <div class="col-md-6 col-sm-10">
-            <p class="fw-bold">Hormat kami yang mengundang</p>
-            <p>
+            <p class="fw-bold" data-aos="fade-left" data-aos-delay="100">
+              Hormat kami yang mengundang
+            </p>
+            <p data-aos="fade-left" data-aos-delay="200">
               Muh. Firaz <br />
               Putri Maya
             </p>
           </div>
         </div>
       </div>
+
       <footer>
         <p class="fw-bold">
           Made with
@@ -393,12 +491,16 @@
           >
         </p>
       </footer>
+      <!-- end container penutup -->
     </section>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Script AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- Script -->
     <script src="assets/js/script.js"></script>
   </body>
 </html>
