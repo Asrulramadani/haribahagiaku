@@ -91,7 +91,7 @@ a {
   border: 2px solid rgba(255, 255, 255, 0.551);
   border-right: 1px solid rgba(255, 255, 255, 0.023);
   border-bottom: 1px solid rgba(255, 255, 255, 0.023);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15);
   color: rgba(0, 0, 0, .7);
   border-radius: 5px;
@@ -143,6 +143,11 @@ a {
   color: var(--secondary-color);
 }
 
+.overlay .buka-undangan i {
+  margin-right: 5px;
+}
+
+
 /* end overlay */
 
 
@@ -164,7 +169,7 @@ a {
   border: 2px solid rgba(255, 255, 255, 0.551);
   border-right: 1px solid rgba(255, 255, 255, 0.023);
   border-bottom: 1px solid rgba(255, 255, 255, 0.023);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(10ppx);
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15);
   color: rgba(0, 0, 0, .7);
   border-radius: 5px;
@@ -375,7 +380,7 @@ a {
   border: 2px solid rgba(255, 255, 255, 0.651);
   border-right: 1px solid rgba(255, 255, 255, 0.123);
   border-bottom: 1px solid rgba(255, 255, 255, 0.123);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(5px);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -429,7 +434,7 @@ a {
   border: 2px solid rgba(255, 255, 255, 0.651);
   border-right: 1px solid rgba(255, 255, 255, 0.123);
   border-bottom: 1px solid rgba(255, 255, 255, 0.123);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(5px);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -509,7 +514,7 @@ a {
   border: 2px solid rgba(255, 255, 255, 0.651);
   border-right: 1px solid rgba(255, 255, 255, 0.123);
   border-bottom: 1px solid rgba(255, 255, 255, 0.123);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(5px);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -679,7 +684,7 @@ a {
   border: 2px solid rgba(255, 255, 255, 0.651);
   border-right: 1px solid rgba(255, 255, 255, 0.123);
   border-bottom: 1px solid rgba(255, 255, 255, 0.123);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(5px);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   -webkit-border-radius: 10px;

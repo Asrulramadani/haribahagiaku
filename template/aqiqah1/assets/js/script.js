@@ -1,19 +1,20 @@
 // Animate on scroll
 
-let imgGallery = document.querySelectorAll(".gallery .img");
+let imgGallery = document.querySelectorAll(".gallery .img")
 imgGallery.forEach((el, i) => {
-  el.dataset.aos = "fade-down";
-  el.dataset.aosDelay = i * 100;
-});
+  el.dataset.aos = "fade-down"
+  el.dataset.aosDelay = i * 100
+})
 
 AOS.init();
+
 
 // icon musik
 const audio = document.querySelector("#audio");
 let isPlaying;
-const iconMusik = document.querySelector("#icon-musik");
+const iconMusik = document.querySelector("#icon-musik")
 
-iconMusik.addEventListener("click", musik());
+iconMusik.addEventListener("click", musik())
 
 function musik() {
   if (isPlaying) {
@@ -26,6 +27,8 @@ function musik() {
     isPlaying = true;
   }
 }
+
+
 
 // Countdown
 const tglTujuan = new Date("May 1 2022 09:00:00").getTime();
@@ -64,6 +67,8 @@ const hitungMundur = setInterval(function () {
   }
 }, 1000);
 
+
+
 // copy text to cliboard
 const btnCopy = document.querySelectorAll("#copy");
 
@@ -72,11 +77,12 @@ btnCopy.forEach((el) => {
     const cb = navigator.clipboard;
     const text = el.parentElement.dataset.akun;
     cb.writeText(text).then(() => {
-      el.classList.replace("bi-clipboard", "bi-check-all");
-      alert(`${text}   berhasil dicopy`);
+      el.classList.replace("bi-clipboard", "bi-check-all")
+      alert(`${text}   berhasil dicopy`)
     });
   });
 });
+
 
 // Form submit to spreedsheets
 
@@ -107,27 +113,33 @@ form.addEventListener("submit", (e) => {
     .catch((error) => console.error("Error!", error.message));
 });
 
-// prevent inspect element
-document.onkeydown = function (e) {
-  if( e.keyCode == 123 ){
-    return false;
-  }
-  if (e.ctrlKey && e.shiftKey && e.keyCode == "I".charCodeAt(0)) {
-    return false;
-  }
-  if (e.ctrlKey && e.shiftKey && e.keyCode == "J".charCodeAt(0)) {
-    return false;
-  }
-  if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
-    return false;
-  }
-};
 
-document.addEventListener("contextmenu", function (e) {
+
+
+
+// prevent inspect element
+document.onkeydown = function(e) { 
+  // if( e.keyCode == 123 ){ 
+  //   return false; 
+  // } 
+  if(e.ctrlKey && e.shiftKey &&e.keyCode == 'I'.charCodeAt(0)){ 
+    return false; 
+  } 
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){ 
+    return false; 
+  } 
+  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){ 
+    return false; 
+  } 
+} 
+
+document.addEventListener("contextmenu", function(e){
   e.preventDefault();
 });
 
-// lihat undangan
+
+
+// buka undangan
 const bukaUndangan = document.querySelector(".buka-undangan");
 
 bukaUndangan.addEventListener("click", function () {
@@ -154,16 +166,16 @@ bukaUndangan.addEventListener("click", function () {
   openFullscreen();
 });
 
+
+
 // fullsreen
 var elem = document.documentElement;
 function openFullscreen() {
   if (elem.requestFullscreen) {
     elem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) {
-    /* Safari */
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
     elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) {
-    /* IE11 */
+  } else if (elem.msRequestFullscreen) { /* IE11 */
     elem.msRequestFullscreen();
   }
 }
