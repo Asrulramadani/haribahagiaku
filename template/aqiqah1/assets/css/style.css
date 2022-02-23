@@ -29,16 +29,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  user-select: none;
+  /* user-select: none; */
 }
 
 body {
   scroll-behavior: smooth;
-  /* background-image: url("../images/bg.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; */
 }
 
 #app {
@@ -47,6 +42,10 @@ body {
   max-width: 1300px;
   position: relative;
   overflow: hidden;
+}
+
+.container-fluid {
+  position: relative;
 }
 
 #audio {
@@ -75,6 +74,8 @@ img {
 a {
   text-decoration: none;
 }
+
+
 
 /* End Base style */
 
@@ -296,7 +297,7 @@ a {
   width: 100%;
   padding-bottom: 7rem;
   height: auto;
-  background-image: url("../images/bg.webp");
+  background-image: url("../images/bg-pc.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -361,7 +362,7 @@ a {
 
 .info-acara {
   height: auto;
-  background-image: url("../images/bg.webp");
+  background-image: url("../images/bg-pc.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -457,7 +458,7 @@ a {
 
 .gallery {
   height: auto;
-  background-image: url("../images/bg.webp");
+  background-image: url("../images/bg-pc.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -482,7 +483,7 @@ a {
 
 .buku-tamu {
   height: auto;
-  background-image: url("../images/bg.webp");
+  background-image: url("../images/bg-pc.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -666,7 +667,7 @@ a {
 /* container amplop digital */
 .amplop-digital {
   height: auto;
-  background-image: url("../images/bg.webp");
+  background-image: url("../images/bg-pc.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -716,7 +717,7 @@ a {
 
 .map {
   height: auto;
-  background-image: url("../images/bg.webp");
+  background-image: url("../images/bg-pc.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -789,6 +790,20 @@ a {
 
 /* end container map/denah lokasi */
 
+
+/* container penutup */
+
+.penutup {
+  height: auto;
+  background-image: url("../images/bg-pc.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* end container penutup */
+
 /* footer */
 
 footer {
@@ -814,6 +829,20 @@ footer p {
       /* Font size */
   --p: .9rem;
   } 
+
+
+  /* base sty;e */
+  .info-bayi,
+  .info-acara,
+  .gallery,
+  .buku-tamu,
+  .amplop-digital,
+  .map,
+  .penutup
+  {
+    background-image: url("../images/bg-mobile.webp");
+  }
+  /* end base style */
 
   /* style */
 

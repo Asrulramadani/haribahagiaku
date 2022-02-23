@@ -1,5 +1,13 @@
 "use strict";
 
+// gallery animate
+const images = document.querySelectorAll(".gallery .card");
+images.forEach((item,i) => {
+  item.dataset.aos = "fade-up"
+  item.dataset.aosDelay = i * 100
+})
+AOS.init();
+
 const audio = document.querySelector("#audio");
 let isPlaying;
 
@@ -78,20 +86,20 @@ const hitungMundur = setInterval(function () {
 }, 1000);
 
 // onscroll animation
-window.addEventListener("scroll", function () {
-  const box = document.querySelectorAll(".animate");
-  const screenPosition = window.innerHeight / 0.9;
+// window.addEventListener("scroll", function () {
+//   const box = document.querySelectorAll(".animate");
+//   const screenPosition = window.innerHeight / 0.9;
 
-  box.forEach((e) => {
-    let contentPosition = e.getBoundingClientRect().top;
+//   box.forEach((e) => {
+//     let contentPosition = e.getBoundingClientRect().top;
 
-    if (contentPosition <= screenPosition) {
-      e.classList.add("active");
-    } else {
-      e.classList.remove("active");
-    }
-  });
-});
+//     if (contentPosition <= screenPosition) {
+//       e.classList.add("active");
+//     } else {
+//       e.classList.remove("active");
+//     }
+//   });
+// });
 
 // Form submit to spreedsheets
 
@@ -135,9 +143,9 @@ closeBtn.addEventListener("click", () => {
 // prevent inspect element
 
 document.onkeydown = function(e) { 
- if( e.keyCode == 123 ){ 
-   return false; 
- } 
+  if( e.keyCode == 123 ){ 
+    return false; 
+  } 
   if(e.ctrlKey && e.shiftKey &&e.keyCode == 'I'.charCodeAt(0)){ 
     return false; 
   } 
@@ -151,4 +159,20 @@ document.onkeydown = function(e) {
 
 document.addEventListener("contextmenu", function(e){
   e.preventDefault();
+});
+
+
+
+// copy text to cliboard
+const btnCopy = document.querySelectorAll("#copy");
+
+btnCopy.forEach((el) => {
+  el.addEventListener("click", () => {
+    const cb = navigator.clipboard;
+    const text = el.parentElement.dataset.akun;
+    cb.writeText(text).then(() => {
+      el.classList.replace("bi-clipboard", "bi-check-all")
+      alert(`${text}   berhasil dicopy`)
+    });
+  });
 });
