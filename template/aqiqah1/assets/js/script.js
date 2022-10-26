@@ -87,7 +87,7 @@ btnCopy.forEach((el) => {
 // Form submit to spreedsheets
 
 const scriptURL =
-  "https://script.google.com/macros/s/AKfycbydtI759XNMYoMNPeMlKu5pcnslQxjesQ6KOzxOkiL3PShOgcXtrWZG6uzZuMpI9PMM/exec";
+  "https://script.google.com/macros/s/AKfycbwr5AeodfxM8YRHECeJOFmkQwrxumCSyLdq1CHIzDQm9wMxpQFdLZJIid9XUz8QLNH8/exec";
 const form = document.forms["my-form"];
 
 const myForm = document.querySelector(".my-Form");
