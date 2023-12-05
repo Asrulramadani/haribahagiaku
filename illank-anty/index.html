@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Illank & Anty" />
+    <meta property="og:title" content="Undangan Pernikahan Illank & Anty" />
+    <meta property="og:url" content="https://haribahagiaku.my.id/illank&anty" />
+    <meta
+      property="og:description"
+      content="Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i serta Kerabat sekalian untuk menghadiri acara pernikahan kami"
+    />
+
+    <meta property="og:image:type" content="image/webp" />
+    <meta
+      property="og:image"
+      content="https://haribahagiaku.my.id/illank&anty/assets/images/thumb.webp"
+    />
+    <meta
+      property="og:image"
+      content="https://haribahagiaku.my.id/illank&anty/assets/images/thumb.webp"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://haribahagiaku.my.id/illank&anty/assets/images/thumb.webp"
+    />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:theme-color" content="#8657a7" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://haribahagiaku.my.id/illank&anty"
+    />
+    <meta
+      property="twitter:title"
+      content="Illank & Anty | Undangan Pernikahan"
+    />
+    <meta
+      property="twitter:image"
+      content="https://haribahagiaku.my.id/illank&anty/assets/images/thumb.webp"
+    />
+
+    <title>Illank & Anty | Undangan Pernikahan</title>
+    <link
+      rel="shortcut icon"
+      href="assets/images/pavicon.webp"
+      type="image/x-icon"
+    />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <link
+      itemprop="thumbnailUrl"
+      href="https://haribahagiaku.my.id/illank&anty/assets/images/thumb.webp"
+    />
+    <span
+      itemprop="thumbnail"
+      itemscope
+      itemtype="http://schema.org/ImageObject"
+    >
+      <link
+        itemprop="url"
+        href="https://haribahagiaku.my.id/illank&anty/assets/images/thumb.webp"
+      />
+    </span>
+
+    <section id="app">
+      <!-- icon musik -->
+      <i
+        class="bi bi-pause-fill icon-musik"
+        id="icon-musik"
+        onclick="musik(this)"
+      ></i>
+
+      <!-- musik -->
+      <audio
+        src="assets/song/You Are The Reason - Calum Scott cover by Alexandra Porat.mp3"
+        id="audio"
+        loop
+      ></audio>
+
+      <!-- Overlay saat undangan pertama kali dibuka -->
+      <div class="overlay">
+        <img src="assets/images/flower-top.webp" alt="" class="top" />
+        <div class="content">
+          <img src="assets/images/illus.webp" alt="" class="illus" />
+          <h1>Illank & Anty</h1>
+          <p>11 Desember 2023</p>
+
+          <p style="font-size: 1.1rem">
+            <strong>To : </strong><span id="to"></span>
+          </p>
+          <button class="buka-undangan">
+            <i class="bi bi-envelope-open-fill icon-undangan"></i> Buka Undangan
+          </button>
+        </div>
+        <img src="assets/images/flower-bottom.webp" alt="" class="bottom" />
+      </div>
+      <!-- Akhir overlay -->
+
+      <!-- container one -->
+      <div class="container one">
+        <div class="hero">
+          <img src="assets/images/flower-top.webp" alt="" class="top" />
+          <div class="content box" style="--i: 1">
+            <p>UNDANGAN PERNIKAHAN</p>
+            <h1>Illank & Anty</h1>
+            <p>11 Desember 2023</p>
+          </div>
+          <img src="assets/images/flower-bottom.webp" alt="" class="bottom" />
+        </div>
+
+        <!-- countdown -->
+        <div class="countdown" id="countdown">
+          <div class="card box" style="--i: 2">
+            <h2 id="hari" class="time">11</h2>
+            <p>Hari</p>
+          </div>
+          <span>:</span>
+          <div class="card box" style="--i: 3">
+            <h2 id="jam" class="time">11</h2>
+            <p>Jam</p>
+          </div>
+          <span>:</span>
+          <div class="card box" style="--i: 4">
+            <h2 id="menit" class="time">11</h2>
+            <p>Menit</p>
+          </div>
+          <span>:</span>
+          <div class="card box" style="--i: 5">
+            <h2 id="detik" class="time">11</h2>
+            <p>Detik</p>
+          </div>
+        </div>
+      </div>
+      <!-- end container one -->
+
+      <!-- Container two -->
+      <div class="container two">
+        <div class="ayat" data-aos="fade-up">
+          <p>
+            Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i
+            serta Kerabat sekalian untuk menghadiri acara pernikahan kami
+          </p>
+          <p></p>
+        </div>
+        <div class="mempelai">
+          <h2 data-aos="fade-up">Kedua Mempelai</h2>
+          <div class="row">
+            <div class="col" data-aos="fade-right">
+              <div class="img"><img src="assets/images/perempuan.webp" /></div>
+              <p>Nursanti Syam</p>
+              <p>
+                Putri dari Bapak Alm. Syamsuddin dg Sitaba dan Ibu Amiati dg
+                Kanang
+              </p>
+            </div>
+            <div class="col" data-aos="fade-left" data-aos-delay="100">
+              <div class="img"><img src="assets/images/laki-laki.webp" /></div>
+              <p>Ilham Putra Azis</p>
+              <p>
+                Putra dari Bapak Abdul Azis Abbas dg Lontang dan Ibu Roswati M,
+                a. Ma, S. Pd
+              </p>
+            </div>
+          </div>
+
+          <div class="ayat" data-aos="fade-up">
+            <p>
+              "Dan diantara tanda-tanda kekuasaan Allah diciptakan-Nya untukmu
+              pasangan hidup dari jenismu sendiri supaya kamu merasa tentram di
+              sampingnya, dan dijadikan-Nya kasih sayang diantara kamu.
+              Sesungguhnya yang demikian menjadi tanda-tanda kebesaran-Nya bagi
+              orang-orang yang berfikir"
+            </p>
+            <p>(Q.S Ar-Rum: 21)</p>
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div class="info">
+          <div class="row">
+            <div class="col" data-aos="fade-right">
+              <h2>Akad Nikah</h2>
+              <p>11 Desember 2023</p>
+              <p>10.00 WITA - Selesai</p>
+              <p>Panrang, Desa Maccini Baji, Kec. Batang, Kab. Jeneponto</p>
+            </div>
+            <div class="col" data-aos="fade-left" data-aos-delay="100">
+              <h2>Resepsi</h2>
+              <p>11 Desember 2023</p>
+              <p>10.00 WITA - Selesai</p>
+              <p>Panrang, Desa Maccini Baji, Kec. Batang, Kab. Jeneponto</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col" data-aos="fade-up" data-aos-delay="200"></div>
+          </div>
+        </div>
+      </div>
+      <!-- End container two -->
+
+      <!-- Container four -->
+      <div class="container four">
+        <h2 data-aos="fade-up">Galeri Foto</h2>
+        <div class="gallery">
+          <div class="card">
+            <img
+              src="assets/images/IMG_1796.webp"
+              alt=""
+              style="transform: translateY(-50px)"
+            />
+          </div>
+          <div class="card">
+            <img
+              src="assets/images/IMG_1798.webp"
+              alt=""
+              style="transform: translateY(-80px)"
+            />
+          </div>
+          <div class="card">
+            <img
+              src="assets/images/IMG_1800.webp"
+              alt=""
+              style="transform: translateY(-50px)"
+            />
+          </div>
+
+          <div class="card">
+            <img
+              src="assets/images/IMG_3812.webp"
+              alt=""
+              style="transform: translateY(-80px)"
+            />
+          </div>
+          <div class="card">
+            <img
+              src="assets/images/IMG_3822.webp"
+              alt=""
+              style="transform: translateY(-20px)"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- End container four -->
+
+      <!-- Container five -->
+      <div class="container five">
+        <h2 data-aos="fade-up">Ucapan & Doa</h2>
+        <div class="alert d-none">
+          <p>
+            Kami ucapkan terimakasih banyak atas kehadiran dan Do'a restu-nya.
+          </p>
+          <p class="close">x</p>
+        </div>
+        <div class="ucapan" data-aos="fade-up">
+          <form name="my-form" class="my-form">
+            <div class="input-box">
+              <input type="text" autocomplete="off" name="nama" required />
+              <div class="label-name">
+                <span>Nama</span>
+              </div>
+            </div>
+            <div class="input-box">
+              <input type="text" autocomplete="off" name="alamat" required />
+              <div class="label-name">
+                <span>Alamat</span>
+              </div>
+            </div>
+            <div class="input-box">
+              <input
+                type="text"
+                autocomplete="off"
+                name="nomor-whatsapp"
+                required
+              />
+              <div class="label-name">
+                <span>Nomor Whatsapp</span>
+              </div>
+            </div>
+            <div class="input-box">
+              <textarea
+                class="pesan-singkat"
+                required
+                placeholder="Pesan Singkat"
+                name="pesan"
+              ></textarea>
+            </div>
+            <button type="submit" class="btnKirim">Kirim</button>
+            <button type="button" class="d-none btnLoading" disabled>
+              <span></span>Loading
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- End container five -->
+
+      <!-- container amplop digital -->
+      <div class="container amplop-digital">
+        <h2 data-aos="fade-up">Love Gift</h2>
+        <div class="cards">
+          <div class="card-md-8">
+            <p class="text-center">
+              Tanpa mengurangi rasa hormat, bagi anda yang ingin memberikan
+              tanda kasih untuk kami, dapat melalui :
+            </p>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="card" data-aos="fade-right">
+            <div class="imgbox">
+              <img src="assets/images/DANA.webp" alt="" />
+            </div>
+            <div class="card-body">
+              <p class="card-text" data-akun="085335555812">
+                085335555812<i class="bi bi-clipboard mx-2" id="copy"></i>
+              </p>
+              <p class="card-text">A.N. Nursanti</p>
+            </div>
+          </div>
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <div class="imgbox">
+              <img src="assets/images/SULSELBAR.webp" alt="" />
+            </div>
+            <div class="card-body">
+              <p class="card-text" data-akun="0302010000195242">
+                0302010000195242<i class="bi bi-clipboard mx-2" id="copy"></i>
+              </p>
+              <p class="card-text">A.N. Nursanti</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- end contaier amplop digital -->
+
+      <!-- Container six -->
+      <div class="container six">
+        <h2 data-aos="fade-up">Lokasi Pernikahan</h2>
+        <div class="maps" data-aos="fade-up">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m8!1m3!1d63528.37363453118!2d119.7462452!3d-5.637133!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d-5.640720399999999!2d119.7871864!5e0!3m2!1sid!2sid!4v1701780092653!5m2!1sid!2sid"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+        <a href="https://maps.app.goo.gl/iQsjSTsCebgSUBRf6" target="_blank"
+          >Buka Maps</a
+        >
+      </div>
+
+      <!-- End container six -->
+
+      <!-- container penutup -->
+
+      <div class="container penutup">
+        <div class="kata-penutup" data-aos="fade-up">
+          <p>
+            Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila
+            Bapak/Ibu/Saudara/i berkenan hadir. Atas kehadiran dan Do'a
+            restu-nya, kami mengucapkan terima kasih
+          </p>
+        </div>
+        <div class="turut-mengundang">
+          <p data-aos="fade-up" data-aos-delay="100">
+            Hormat kami yang mengundang
+          </p>
+          <p data-aos="fade-up" data-aos-delay="200">
+            Ilham Putra Azis <br />
+            Nursanti Syam
+          </p>
+        </div>
+      </div>
+
+      <!-- end container penutup -->
+
+      <!-- Footer -->
+
+      <footer>
+        <p>
+          Made with
+          <span style="color: red; font-size: 1.1rem">&#x2764;</span> by
+          <a href="https://haribahagiaku.netlify.app/" target="_parent"
+            >HariBahagiaku</a
+          >
+        </p>
+      </footer>
+
+      <!-- End footer -->
+    </section>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
